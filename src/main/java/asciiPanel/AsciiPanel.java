@@ -12,6 +12,8 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * This simulates a code page 437 ASCII terminal display.
  * @author Trystan Spangler
@@ -114,6 +116,8 @@ public class AsciiPanel extends JPanel {
     private BufferedImage[] glyphs;
     private AsciiCharacterData[][] characters;
     private AsciiCharacterData[][] previousCharacters;
+    
+    @Autowired
     private AsciiFont asciiFont;
 
     /**
